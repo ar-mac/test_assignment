@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import {connect} from 'react-redux';
 
-class List extends Component {
+export class ItemsList extends Component {
   render() {
     const {items = []} = this.props;
     if (!items.length) return <div>No items</div>;
@@ -16,7 +17,7 @@ class List extends Component {
   }
 }
 
-List.propTypes = {
+ItemsList.propTypes = {
   items: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string,
@@ -25,4 +26,7 @@ List.propTypes = {
   )
 };
 
-export default List;
+const mapStateToProps = (state) => ({
+  items: state.items,
+});
+export default connect(mapStateToProps)(ItemsList);

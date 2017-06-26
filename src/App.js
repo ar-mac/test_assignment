@@ -1,18 +1,22 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-import Input from './containers/Input';
-import List from './containers/List';
+import AddItem from './actions/AddItem';
+import { ItemsForm, ItemsList } from './containers/'
 import './App.css';
 
-class App extends Component {
+export class App extends Component {
   render() {
     return (
       <div className="App">
-        <Input />
-        <List />
+        <ItemsForm onSubmit={this.props.submitItem} />
+        <ItemsList />
       </div>
     );
   }
 }
+const mapDispatchToProps = (dispatch) => ({
+  submitItem: (formData) => dispatch(AddItem(formData)),
+});
 
-export default App;
+export default connect(null, mapDispatchToProps)(App);

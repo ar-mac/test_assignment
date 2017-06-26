@@ -1,13 +1,13 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import List from '../List';
+import { ItemsList } from '../ItemsList';
 
-describe('List', () => {
+describe('ItemsList', () => {
   const setup = (propOverrides) => {
     const props = Object.assign({}, propOverrides);
 
-    const wrapper = shallow(<List {...props} />);
+    const wrapper = shallow(<ItemsList {...props} />);
 
     return {
       props,

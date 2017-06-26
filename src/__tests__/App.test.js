@@ -1,13 +1,13 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import Input from '../Input';
+import { App } from '../App';
 
-describe('Input', () => {
+describe('App', () => {
   const setup = (propOverrides) => {
     const props = Object.assign({}, propOverrides);
 
-    const wrapper = shallow(<Input {...props} />);
+    const wrapper = shallow(<App {...props} />, { lifecycleExperimental: true });
 
     return {
       props,

@@ -1,2 +1,2 @@
-export List from './List';
-export Input from './Input';
+export { default as ItemsList } from './Items/ItemsList';
+export { default as ItemsForm } from './Items/ItemsForm';
