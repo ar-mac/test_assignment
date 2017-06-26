@@ -10,7 +10,7 @@ export class ItemsList extends Component {
     return (
       <div className="items">
         {items.map(item => (
-          <div key={item.id}>{item.content}</div>
+          <div key={item.id}>{item.content} - {item.count}</div>
         ))}
       </div>
     )
@@ -22,6 +22,7 @@ ItemsList.propTypes = {
     PropTypes.shape({
       id: PropTypes.string,
       content: PropTypes.string,
+      count: PropTypes.number,
     })
   )
 };
