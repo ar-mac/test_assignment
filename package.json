@@ -4,7 +4,11 @@
   "private": true,
   "dependencies": {
     "react": "^15.6.1",
-    "react-dom": "15.5+"
+    "react-dom": "15.5+",
+    "react-redux": "^5.0.5",
+    "redux": "^3.7.1",
+    "redux-actions": "^2.0.3",
+    "redux-devtools-extension": "^2.13.2"
   },
   "devDependencies": {
     "enzyme": "^2.9.1",
