@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import AddItem from './actions/AddItem';
-import { ItemsForm, ItemsList } from './containers/'
+import { ItemsForm, ItemsList, ItemsReset } from './containers/'
 import './App.css';
 
 export class App extends Component {
@@ -10,6 +10,7 @@ export class App extends Component {
     return (
       <div className="App">
         <ItemsForm onSubmit={this.props.submitItem} />
+        <ItemsReset />
         <ItemsList />
       </div>
     );
